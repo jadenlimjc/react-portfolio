@@ -12,7 +12,7 @@
         padding: 8px 0;
 
         img {
-            display: bloc;
+            display: block;
             margin: 8px auto;
             width: 24px;
             height: auto;
@@ -98,5 +98,27 @@
         }
     }
 
-
+    ul {
+        position: absolute; 
+        bottom: 20px;
+        width: 100%;
+        display: block;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        margin: 0;
+        
+        li {
+            a {
+                padding: 7px 0;
+                display: block;
+                font-size: 15px;
+                line-height: 16px;
+            
+                &:hover svg {
+                  color: #ffd700;
+                }
+            }   
+        }
+    }
 }
