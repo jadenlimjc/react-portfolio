@@ -1,7 +1,5 @@
 import './index.scss'
 import {Link, NavLink} from 'react-router-dom'
-import LogoJ from '../../assets/images/logo-j.png'
-import LogoSubtitle from '../../assets/images/logo_sub.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faUser, faEnvelope, faJ, faWaveSquare} from '@fortawesome/free-solid-svg-icons'; // Import specific FontAwesome icons
 import {

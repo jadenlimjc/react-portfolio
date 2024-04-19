@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 // import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
-import LogoTitle from '../../assets/images/logo-j.png'
 import Logo from './Logo'
 import './index.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faJ} from '@fortawesome/free-solid-svg-icons'; 
 
 
 const Home = () => {
@@ -26,9 +27,9 @@ const Home = () => {
                 <span className={`${letterClass} _12`}>i,</span> 
                 <br /> 
                 <span className={`${letterClass} _13`}>I</span> 
-                <span className={`${letterClass} _14`}>'m</span> 
+                <span className={`${letterClass} _14`}>'m </span> 
 
-                <img src={LogoTitle} alt="undergrad" />
+                <FontAwesomeIcon icon={faJ} className="j" />
                 <AnimatedLetters letterClass={letterClass}
                 strArray={nameArray}
                 idx={15} />
