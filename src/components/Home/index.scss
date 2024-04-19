@@ -40,9 +40,11 @@
             
         }
                 
-        img {
+        .j-icon {
+            color: #ffd700;
             width: 30px;
             margin-left: 20px;
+            margin-right: 1px;
             opacity: 0.5;
             height: auto;
             animation: rotateIn 1s linear both;
