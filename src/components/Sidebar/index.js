@@ -3,7 +3,7 @@ import {Link, NavLink} from 'react-router-dom'
 import LogoJ from '../../assets/images/logo-j.png'
 import LogoSubtitle from '../../assets/images/logo_sub.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faUser, faEnvelope,} from '@fortawesome/free-solid-svg-icons'; // Import specific FontAwesome icons
+import { faHome, faUser, faEnvelope, faJ, faWaveSquare} from '@fortawesome/free-solid-svg-icons'; // Import specific FontAwesome icons
 import {
     faLinkedin,
     faGithub,
@@ -12,8 +12,8 @@ import {
 const Sidebar = () => (
 <div className = "nav-bar">
     <Link className = "logo" to="/">
-        <img src={LogoJ} alt="logo" />
-        <img className= "sub-logo" src={LogoSubtitle} alt="wave" />
+        <FontAwesomeIcon icon = {faJ} color= "#4d4d4e" />
+        <FontAwesomeIcon sub-logo = {faWaveSquare} color= "#4d4d4e" />
     </Link>
     <nav>
         <NavLink exact = "true" activeClassName="active" to = "/">
@@ -47,6 +47,7 @@ const Sidebar = () => (
         </li>
     </ul>
 
-</div>)
+</div>
+)
 
 export default Sidebar

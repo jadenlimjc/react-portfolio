@@ -1,11 +1,14 @@
-import LogoTitle from '../../assets/images/logo-j.png'
-import { Link } from 'react-router-dom'
-import './index.scss'
-import AnimatedLetters from '../AnimatedLetters'
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+// import Loader from 'react-loaders'
+import AnimatedLetters from '../AnimatedLetters'
+import LogoTitle from '../../assets/images/logo-j.png'
+import Logo from './Logo'
+import './index.scss'
+
 
 const Home = () => {
-    const[letterClass, setLetterClass] = useState('text-animate')
+    const [letterClass, setLetterClass] = useState('text-animate')
     const nameArray = ['a','d','e','n', ',']
     const jobArray = ['a','n',' ','N','U','S',' ', 'U','n','d','e','r','g','r','a','d','u','a','t','e','.']
     
@@ -37,6 +40,7 @@ const Home = () => {
                 <h2>Computer Engineering Student / RPA Intern</h2>
                 <Link to="/contact" className="flat-button">CONTACT ME</Link>
             </div>
+            <Logo />
 
         </div>
     )
