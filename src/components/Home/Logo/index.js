@@ -1,17 +1,31 @@
 import "./index.scss";
 import LogoJ from '../../../assets/images/logo-j.png'
-import { useRef } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faJ} from '@fortawesome/free-solid-svg-icons'; 
+import { useEffect, useRef } from "react";
+import DrawSVGPlugin from "gsap-trial/DrawSVGPlugin";
+import gsap from 'gsap-trial'
 
 const Logo = () => {
 
-    const bgRef = useRef();
-    const outlineLogoRef = useRef();
-    const solidLogoReg = useRef();
+    const bgRef = useRef()
+    const outlineLogoRef = useRef()
+    const solidLogoRef = useRef()
+
+    useEffect(() => {
+        gsap.registerPlugin(DrawSVGPlugin)
+
+        gsap.timeline()
+        toString(bgRef.current, {
+            duration: 5,
+            opacity: 1
+        })
+    },[])
 
 
     return (
-        <div className="logo-container">
-            <img className='solid-logo' src={LogoJ} alt="J" />
+        <div className="logo-container" ref ={bgRef}>
+             <FontAwesomeIcon ref = {solidLogoRef} icon={faJ} className="solid-logo" />
             <svg
                 width="559pt"
                 height="897pt"
@@ -30,6 +44,7 @@ const Logo = () => {
                     />
                 </g>
             </svg>
+            
         </div>
     )
 
