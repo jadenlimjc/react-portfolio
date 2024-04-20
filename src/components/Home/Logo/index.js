@@ -16,10 +16,27 @@ const Logo = () => {
         gsap.registerPlugin(DrawSVGPlugin)
 
         gsap.timeline()
-        toString(bgRef.current, {
+        .to(solidLogoRef.current, {
             duration: 5,
             opacity: 1
         })
+        .from(solidLogoRef.current, {
+            drawSVG: 0,
+            duration:20,
+        })
+
+        gsap.fromTo(
+            solidLogoRef.current,
+            {
+                opacity: 0,
+            },
+            {
+                opacity: 1,
+                delay: 4,
+                duration: 4,
+            }
+
+        )
     },[])
 
 
